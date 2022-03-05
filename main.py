@@ -1,6 +1,13 @@
 # Imports
 from time import sleep
-import RPi.GPIO as GPIO
+
+try:
+    import RPi.GPIO as GPIO
+    GPIO.setwarnings(False)
+    GPIO.setmode(GPIO.BCM)
+except ImportError:
+    print("Error: RPi.GPIO not found")
+
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -16,7 +23,7 @@ class Main:
 
     def __init__(self, speech):
         command = self.speech_processing(speech)
-        print(command)
+
 
     def speech_processing(self, speech):
         # ToDo: improve tokenizer for words like can't, won't, etc.
@@ -51,9 +58,6 @@ class Main:
 
 
 if __name__ == "__main__":
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BCM)
-
     try:
         while True:
             command = input("Command: ")
