@@ -23,7 +23,7 @@ class Main:
 
     def __init__(self, speech):
         command = self.speech_processing(speech)
-
+        print(command)
 
     def speech_processing(self, speech):
         # ToDo: improve tokenizer for words like can't, won't, etc.

@@ -1,0 +1,6 @@
+Linux:
+pip install SpeechRecognition pyttsx3 pyaudio flask wsgiserver RPi.GPIO
+
+Windows:
+pip install SpeechRecognition pyttsx3 pipwin flask wsgiserver RPi.GPIO
+pipwin install pyaudio
