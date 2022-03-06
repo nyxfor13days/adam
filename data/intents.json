@@ -1,0 +1,10 @@
+{
+	"intents": [
+		{
+			"tag": "",
+			"pattern": [],
+			"response": [],
+			"contexts": []
+		}
+	]
+}
